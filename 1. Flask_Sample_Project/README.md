@@ -74,21 +74,21 @@ For help with installing the necessary libraries, visit the following sites
 For Mac:
 
 ```
-export FLASK_APP=example-app.py
+export FLASK_APP=project.py
 flask run
 ```
 
 For Windows:
 
 ```
-set FLASK_APP=example-app.py
+set FLASK_APP=project.py
 flask run
 ```
 
-Following command allows you to run `Flask Run` automatically when you start virtual environment, without enter the command `FLASK_APP=example-app.py` every time.
+Following command allows you to run `Flask Run` automatically when you start virtual environment, without enter the command `FLASK_APP=project.py` every time.
 
 ```
-pip3 install python-dotenv
+pip install python-dotenv
 ```
 
 6. Visit the website:
