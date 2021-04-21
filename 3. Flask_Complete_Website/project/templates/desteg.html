@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!doctype html>
+ <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/desteg.css') }}" />
+    <!-- <link rel="stylesheet" href="../static/css/desteg.css"/> -->
+</head>
+<body>
+    <h2> Do you know what is Steganography?</h2>
+    <div class=des>
+        Steganography allows you to encrypt and decrypt message in a image. There are two functions for you to play with on this page. First, when you choose the Steg image, please select one image that is <b>PNG</b> format. The reason it has to be png not jpg because jpg is a compressed image, the program will not work. Once you chose a png image, the next step is enter a message. Then, click upload it will return a image with message encrypted. <br>
+
+        When you finish encrypting the image, you can download it and then use the Desteg image function to decrypt it. Amazing right? Find out more about Steganography here: <a href="https://en.wikipedia.org/wiki/Steganography">on Wikipedia</a>
+    </div>
+
+
+    <div class="nav-bar">
+        <ul class="nav">
+            <li><a href=#one>Steg Image</a></li>
+            <li><a href=#two>Desteg Image</a></li>
+        </ul>
+    </div>   
+
+
+    <div class = display-right>
+        <div id=one class=section >
+            {#    action="{{ url_for('steg.steg_file') }} this is the function name not the one start with / in routes#}
+            <p>Steg Image</p>
+            Only <b>PNG</b> files are allowed!!!<br>
+            <form  action="{{ url_for('steg.steg_file') }}" method=post enctype=multipart/form-data>
+        
+                select a file:
+                <input type=file name=file>
+                Input message:
+                <input type=text name=inputtext>
+                <input type=submit value=Upload>
+            </form>
+        </div>
+
+        <div id=two class=section>
+            <p>Desteg Image</p>
+            <form action="{{ url_for('steg.desteg_file') }}" method=post enctype=multipart/form-data>
+                select a file:
+                <input type=file name=file>
+                <input type=submit value=Upload>
+            </form>
+        </div>
+    </div>
+
+</body>
+    {% endblock %}

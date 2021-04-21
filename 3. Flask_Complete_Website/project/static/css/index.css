@@ -1,0 +1,43 @@
+
+
+
+body{
+    background-color: #eef4ff;
+    /* padding: 1%; */
+    margin: 2%;
+}
+
+h2{
+    font-size: 24px;
+    text-align: left;
+    border-width: 2px;
+    border-bottom-style: solid;
+    font-weight: Italic bold;
+    border-bottom-color: #efd54c;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: center;
+}
+
+p{
+    display: block;
+}
+
+p, li{
+    font-size: 115%;
+}
+
+h4{
+    font-size: 120% ;
+}
+
+li>span {
+    position: relative;
+    left: -10px;
+  }

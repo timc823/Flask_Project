@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!doctype html>
+    <title>Steg the Image</title>
+    <h1>Your Steg an Image!</h1>
+    {% if filename %}
+		<img src="{{url_for('steg.get_file', filename=filename) }}">
+		<p>{{ filename }}</p>
+        </div>
+	{% endif %}
+{% endblock %}

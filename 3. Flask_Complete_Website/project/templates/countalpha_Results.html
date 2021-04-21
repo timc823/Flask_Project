@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/countresult.css') }}" />
+    <!-- <link rel="stylesheet" href="../static/css/ascii.css"/> -->
+</head>
+<body>
+    <h2>Output:</h2>
+    <pre>
+    {# This has to be one line because if you format the code, <pre> will print out the enter  #}
+        {% for line in output -%} <div style="font-size:150%">{{ line.line }}</div>{% endfor -%}
+    </pre>
+</body>
+{% endblock %}
+
+

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{##jinja2: lstrip_blocks: False#}
+{##jinja2: trim_blocks: False#}
+
+{% block content %}
+
+    <h1>Output:</h1>
+    <pre>
+    {# This has to be one line because if you format the code, <pre> will print out the enter  #}
+     {% for line in output -%} <div style="font-size:150%">{{ line.line }}</div>{% endfor -%}
+    </pre>
+{% endblock %}
+
+

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" /> -->
+    <link rel="stylesheet" href="../static/css/index.css" />
+</head>
+
+
+<!-- <h1>Hi, {{ user.message }}!</h1> -->
+
+<body>
+    <section>
+        <h2>Description</h2>
+        <p>Welcome to the Flask App project. In this project, you will Flask to build a web application. You are going
+            to use Python as the main programming language. In addition, you may also need write some HTML code for your
+            website. If you give your website a little bit design or color, CSS and JavaScript are also welcome. Feel
+            free to ask questions and enjoy your web development with Flask and Python. </p>
+    </section>
+    <section>
+        <h2>Skills</h2>
+
+        <table>
+            <tr>
+                <th>Mandatory</th>
+                <th>Optional</th>
+            </tr>
+
+            <tr>
+                <ul>
+                    <td>
+                        <li><span>Flask</span></li>
+                        <li><span>Python</span></li>
+                        <li><span>HTML</span></li>
+                    </td>
+
+                    <td>
+                        <li><span>Git</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </td>
+                </ul>
+            </tr>
+        </table>
+
+    </section>
+    <section>
+        <h2>Resource</h2>
+        <h4>Here are some useful resources you can learn more about Flask</h4>
+        <p>I have created a sample project that you can start with, please visit the GitHub repository at <a href="https://github.com/cct823/IST341_Flask_Demo">IST341 Sample Project</a><p>
+        <p><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world"> Flask Tutorial</a> -- This website provides a really good Flask tutorial, you only need first two chapters to have the basic knowledge to complete this project.</li>
+        </p>
+        <p>If you want to put different functions in different folders, you may want to search <b>Blueprints</b></p>
+        <p>If you want to make your website colorful, you can use <b>CSS or JavaScript</b></p>
+    </section>
+</body>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flask App Project</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" /> -->
+    <link rel="stylesheet" href="../static/css/base.css" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome To Flask App Project For IST341 </h1>
+        <nav>
+            <a href="/index">Home</a>
+            <a href="/printRect">ASCII Art</a>
+            <a href="/desteg">Steganography</a>
+            <a href="/image">Convert Image</a>
+            <a href="/countalpha">Count Letters</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+</body>
+
+</html>

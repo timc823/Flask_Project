@@ -1,0 +1,22 @@
+
+<html>
+    <head>
+{#        if statement make sure there is title when you forget to return title in route.py#}
+        {% if title %}
+        <title>{{ title }} - IST341_Flask Project</title>
+        {% else %}
+        <title> Welcome to IST341_Flask Project</title>
+        {% endif %}
+
+    </head>
+    <body>
+        <div>IST341:
+            <a href="/index">Home</a>
+            <a href="/printRect">ASCII Art</a>
+            <a href="/image">File Invert</a>
+        </div>
+
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

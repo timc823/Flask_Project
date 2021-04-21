@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ user.message }}!</h1>
+    <div> Below are few functions that allows you to play with the ASCII Art</div>
+
+    {#    section 1#}
+    <p style="font-size:150%"> 1. Print Rectangular </p>
+    <form action="{{ url_for('arts.printRect') }}" method="post">
+        Input Width:
+        <input type=text  name=width ><br><br>
+        Input Height:
+        <input type=text  name=height ><br><br>
+        Input Symbol:
+        <input type=text    name=symbol ><br><br>
+        <input type=submit  value=Submit><br>
+    </form>
+
+    {#    section 2#}
+    <p style="font-size:150%"> 2. Print Triangle </p>
+    <form action="{{ url_for('arts.printTriangle') }}" method="post">
+        Input Width:
+        <input type=text  name=width ><br><br>
+        Input Symbol:
+        <input type=text  name=symbol ><br><br>
+        Input True of False:
+        <input type=text  name=whichsideup ><br><br>
+        <input type=submit  value=Submit><br>
+    </form>
+
+    {#    section 3#}
+    <p style="font-size:150%"> 3. Print Bumps </p>
+    <form action="{{ url_for('arts.printBumps') }}" method="post">
+        Input number:
+        <input type=text  name=number ><br><br>
+        Input Symbol 1:
+        <input type=text  name=symbol1 ><br><br>
+        Input Symbol 2:
+        <input type=text  name=symbol2 ><br><br>
+        <input type=submit  value=Submit><br>
+    </form>
+
+    {#    section 4#}
+    <p style="font-size:150%"> 4. Print Diamond </p>
+    <form action="{{ url_for('arts.printDiamond') }}" method="post">
+        Input width:
+        <input type=text  name=number ><br><br>
+        Input Symbol :
+        <input type=text  name=symbol ><br><br>
+        <input type=submit  value=Submit><br>
+    </form>
+
+    {#    section 5#}
+    <p style="font-size:150%"> 5. Print Striped Diamond </p>
+    <form action="{{ url_for('arts.printStripedDiamond') }}" method="post">
+       Try Width 7. It's easier to see.<br><br>
+        Input width:
+        <input type=text  name=number ><br><br>
+        Input Symbol 1:
+        <input type=text  name=symbol1 ><br><br>
+        Input Symbol 2:
+        <input type=text  name=symbol2 ><br><br>
+        <input type=submit  value=Submit><br>
+    </form>
+
+    {#    section 6#}
+    <p style="font-size:150%"> 6. Print Crazy Striped Diamond </p>
+    <form action="{{ url_for('arts.printCrazyStripedDiamond') }}" method="post">
+        NOTE: Width > Sym1Width > Sym2Width <br><br>
+        Input width:
+        <input type=text  name=number ><br><br>
+        Input Symbol 1:
+        <input type=text  name=symbol1 ><br><br>
+        Input Symbol 2:
+        <input type=text  name=symbol2 ><br><br>
+        Input Symbol 1 Width:
+        <input type=text  name=sym1Width ><br><br>
+        Input Symbol 2 Width:
+        <input type=text  name=sym2Width ><br><br>
+        <input type=submit  value=Submit><br>
+    </form>
+
+{% endblock %}

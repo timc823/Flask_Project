@@ -1,0 +1,17 @@
+h2{
+    text-align: left;
+}
+
+body{
+    margin: 2%
+}
+
+p{
+    font-size: 110%
+}
+
+img{
+    width: 50%;
+    border: 3px solid;
+    border-color: #efd54c;
+}

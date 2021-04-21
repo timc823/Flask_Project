@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!doctype html>
+{#    <title>Steganography</title>#}
+    <h1>Count Letters </h1>
+    <p>Upload a text file and the program will count how many time each letter appears</p>
+    <form  method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+    {% endblock %}

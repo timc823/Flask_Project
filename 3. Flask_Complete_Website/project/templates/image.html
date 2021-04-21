@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!doctype html>
+
+ <head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/image.css') }}" />
+  <!-- <link rel="stylesheet" href="../static/css/image.css"/> -->
+</head>
+
+<body>
+
+  <h2> Image Converter</h2>
+  <div class=des>
+      You know a color is a combination of Red, Green and Blue. But, do you know what will happen if you make RGB to GBR or other orders? <br> Find out by using the function below! 
+
+  </div>
+  <div class = display-right>
+    <div id=one class=section >
+      <p> Invert RGB </p>
+      <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+      </form>
+  </div>  
+</body>
+{% endblock %}

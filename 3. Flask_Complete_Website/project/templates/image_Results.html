@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}    
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/image_result.css') }}" />
+  <link rel="stylesheet" href="../static/css/image_result.css"/>
+</head>
+<body>
+  <h2>Your Inverted Image!</h2>
+  {% if filename %}
+    <p>Here is the Inverted Image</p>
+    <img src="{{url_for('steg.get_file', filename=filename) }}">
+  {% endif %}
+</body> 
+
+  
+{% endblock %}

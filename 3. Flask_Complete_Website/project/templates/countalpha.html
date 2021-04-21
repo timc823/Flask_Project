@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!doctype html>
+{#    <title>Steganography</title>#}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/count.css') }}" />
+  <link rel="stylesheet" href="../static/css/count.css"/>
+</head>
+
+<body>
+    <h2>Count Alphabet </h2>
+    <div class=des>
+      This is a simple program counting how many times each alphabet appears in a text document. The program will not count punctuation marks.
+    </div>
+
+
+    
+    <p>Upload Text File</p>
+    <form  method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+</body>
+{% endblock %}

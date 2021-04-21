@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/desteg_result.css') }}" />
+  <!-- <link rel="stylesheet" href="../static/css/desteg_result.css"/> -->
+</head>
+<body>
+  <h2>Steg Image Result</h2>
+  
+  {% if filename %}
+    <p>Here is the file name of the image below <b>{{ filename }}</b></p>
+    <p>Now, download this image and try to use the Desteg function!!!</p>
+    <img src="{{url_for('steg.get_file', filename=filename) }}">
+  {% endif %}
+</body> 
+{% endblock %}

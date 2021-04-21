@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!doctype html>
+{#    <title>Steganography</title>#}
+    <h1>Steganography</h1>
+
+    <h3>Steg</h3>
+    <p>Upload an image and we'll encode the message if there is hidden message in the picture!</p>
+{#    action="{{ url_for('steg.steg_file') }} this is the function name not the one start with / in routes#}
+    <form  action="{{ url_for('steg.steg_file') }}" method=post enctype=multipart/form-data>
+
+        select a file:
+        <input type=file name=file>
+        Input message:
+        <input type=text name=inputtext>
+        <input type=submit value=Upload>
+    </form>
+
+
+    <h3>Desteg</h3>
+    <p>Upload an image and we'll decode the message if there is hidden message in the picture!</p>
+    <form action="{{ url_for('steg.desteg_file') }}" method=post enctype=multipart/form-data>
+        select a file:
+        <input type=file name=file>
+        <input type=submit value=Upload>
+    </form>
+
+
+{#    <h1>Steganography-Steg</h1>#}
+
+    {% endblock %}

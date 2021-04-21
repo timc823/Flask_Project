@@ -1,0 +1,157 @@
+{% extends "base.html" %} {% block content %}
+<!-- <h1>Hi, {{ user.message }}!</h1> -->
+<head>
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/ascii.css') }}"
+  />
+  <!-- <link rel="stylesheet" href="../static/css/ascii.css"/> -->
+</head>
+
+<body>
+  <h2>Welcome to the ASCII World!!!!</h2>
+  <div class="des">
+    ASCII abbreviated from American Standard Code for Information Interchange,
+    is a character encoding standard for electronic communication. Find on more
+    here: <a href="https://en.wikipedia.org/wiki/ASCII"> on Wikipedia</a> <br />
+    There are six python functions that allow you to create some shapes by using
+    ASCII characters. This is just an example, if you don't like these shapes,
+    you can write your own python function to create your own ASCII art work,
+    ENJOY!
+  </div>
+
+  <div class="nav-bar">
+    <ul class="nav">
+      <li><a href="#one">Rectangular</a></li>
+      <li><a href="#two">Triangle</a></li>
+      <li><a href="#three">Bumps</a></li>
+      <li><a href="#four">Diamond</a></li>
+      <li><a href="#five">Striped Diamond</a></li>
+      <li><a href="#six">Crazy Striped Diamond</a></li>
+      <li><a href="#seven">Basic Christmas Tree</a></li>
+      <li><a href="#eight">Luxury Christmas Tree</a></li>
+    </ul>
+  </div>
+
+  {# section 1#}
+  <div class="display-right">
+    <div id="one" class="section">
+      <p>Print Rectangular</p>
+      <form action="{{ url_for('arts.printRect') }}" method="post">
+        Input Width:
+        <input type="text" name="width" /><br /><br />
+        Input Height:
+        <input type="text" name="height" /><br /><br />
+        Input Symbol:
+        <input type="text" name="symbol" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 2#}
+    <div id="two" class="section">
+      <p>Print Triangle</p>
+      <form action="{{ url_for('arts.printTriangle') }}" method="post">
+        Input Width:
+        <input type="text" name="width" /><br /><br />
+        Input Symbol:
+        <input type="text" name="symbol" /><br /><br />
+        Input True of False:
+        <input type="text" name="whichsideup" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 3#}
+    <div id="three" class="section">
+      <p>Print Bumps</p>
+      <form action="{{ url_for('arts.printBumps') }}" method="post">
+        Input Number:
+        <input type="text" name="number" /><br /><br />
+        Input Symbol 1:
+        <input type="text" name="symbol1" /><br /><br />
+        Input Symbol 2:
+        <input type="text" name="symbol2" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 4#}
+    <div id="four" class="section">
+      <p>Print Diamond</p>
+      <form action="{{ url_for('arts.printDiamond') }}" method="post">
+        Input Width:
+        <input type="text" name="number" /><br /><br />
+        Input Symbol :
+        <input type="text" name="symbol" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 5#}
+    <div id="five" class="section">
+      <p>Print Striped Diamond</p>
+      <form action="{{ url_for('arts.printStripedDiamond') }}" method="post">
+        NOTE: Try Width 7 or above. It's easier to see.<br /><br />
+        Input Width:
+        <input type="text" name="number" /><br /><br />
+        Input Symbol 1:
+        <input type="text" name="symbol1" /><br /><br />
+        Input Symbol 2:
+        <input type="text" name="symbol2" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 6#}
+    <div id="six" class="section">
+      <p>Print Crazy Striped Diamond</p>
+      <form
+        action="{{ url_for('arts.printCrazyStripedDiamond') }}"
+        method="post"
+      >
+        NOTE: Width > Sym1 Width > Sym2 Width <br /><br />
+        Input Width:
+        <input type="text" name="number" /><br /><br />
+        Input Symbol 1:
+        <input type="text" name="symbol1" /><br /><br />
+        Input Symbol 2:
+        <input type="text" name="symbol2" /><br /><br />
+        Input Symbol 1 Width:
+        <input type="text" name="sym1Width" /><br /><br />
+        Input Symbol 2 Width:
+        <input type="text" name="sym2Width" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 7#}
+    <div id="seven" class="section">
+      <p>Print Basic Christmas Tree</p>
+      <form action="{{ url_for('arts.printStarTree') }}" method="post">
+        Input Height:
+        <input type="text" name="number" /><br /><br />
+        Input Symbol:
+        <input type="text" name="symbol" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+
+    {# section 8#}
+    <div id="eight" class="section">
+      <p>Print Luxury Christmas Tree</p>
+      <form action="{{ url_for('arts.printLuxuryTree') }}" method="post">
+        NOTE: Height should be an odd number and greater than 3. Suggested using
+        number greater than 5!!<br /><br />
+        Input Height:
+        <input type="text" name="number" /><br /><br />
+        Input Symbol1:
+        <input type="text" name="symbol1" /><br /><br />
+        Input Symbol2:
+        <input type="text" name="symbol2" /><br /><br />
+        <input type="submit" value="Submit" /><br />
+      </form>
+    </div>
+  </div>
+</body>
+{% endblock %}

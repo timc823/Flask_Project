@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ user.message }}!</h1>
+    <div> Custom Message </div>
+
+
+    {#    section 1#}
+    <p>  1. Print Rectangular </p>
+    <form  method="post">
+        Input Width:
+        <input type=text  name=width ><br><br>
+        Input Height:
+        <input type=text  name=height ><br><br>
+        Input Symbol:
+        <input type=text    name=symbol ><br><br>
+        <input type=submit  value=Submit><br>
+
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!doctype html>
+    <title>Color Inverter</title>
+    <h1>Convert RGB</h1>
+    <p>Upload an image and we'll invert the colors!</p>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+    {% endblock %}
